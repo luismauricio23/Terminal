@@ -1,0 +1,63 @@
+﻿@model TerminalTransporte.Models.Bus
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro que quiere eliminar este Bus?</h3>
+<div>
+    <br/>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Placa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa_bus)
+        </dd>
+        <dt>
+            Tipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_bus)
+        </dd>
+
+        <dt>
+           Cantidad Pasajeros
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad_pasajeros_bus)
+        </dd>
+
+        <dt>
+           Nombre Conductor 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conductor.Nombre_Conductor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+       
+
+        <a href="@Url.Action("Index", "Buses")" class="btn btn-primary">
+            <i class="icon-pencil icon-white"></i>
+            <span>
+                <strong>Regresar</strong>
+            </span>
+        </a>
+    </div>
+    }
+</div>

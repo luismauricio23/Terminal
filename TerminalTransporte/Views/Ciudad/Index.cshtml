@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TerminalTransporte.Models.Ciudad>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<br />
+<br />
+
+<p>
+<p>
+
+    <a href="@Url.Action("Create", "Ciudad")" class="btn btn-primary">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Crear Ciudad</strong>
+        </span>
+    </a>
+
+</p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Codigo
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo_ciudad)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_ciudad)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "Edit", new { id = item.Codigo_ciudad }, new { @class = "glyphicon glyphicon-pencil" })|
+                @Html.ActionLink(" ", "Details", new { id = item.Codigo_ciudad }, new { @class = "glyphicon glyphicon-plus" }) |
+                @Html.ActionLink(" ", "Delete", new { id = item.Codigo_ciudad }, new { @class = "glyphicon glyphicon-trash" })
+            </td>
+        </tr>
+    }
+
+</table>

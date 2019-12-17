@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="368509cc2a464c71aeb229f359a54f15" Name="Diagram1">
+        <EntityTypeShape EntityType="MiSistemaModel.Bus" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Ciudad" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Cliente" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Conductor" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Empleado" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Empresa" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.modulo" Width="1.5" PointX="1.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.operaciones" Width="1.5" PointX="3.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Reserva" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.rol" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.rol_operacion" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.Tiquete" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="MiSistemaModel.FK_Bus_Conductor" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Tiquete_Bus" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Reserva_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Reserva_Ciudad1" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Tiquete_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Tiquete_Ciudad1" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Reserva_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Tiquete_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Conductor_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Factura_Conductor" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Empleado_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Factura_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_usuario_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Factura_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_Reserva_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_operaciones_modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_rol_operacion_operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_rol_operacion_rol" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

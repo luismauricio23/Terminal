@@ -1,0 +1,86 @@
+﻿@model TerminalTransporte.Models.Reserva
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro que quiere eliminar esta Reserva?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_Reserva)
+        </dd>
+        <dt>
+            Ciudad origen
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.Nombre_ciudad)
+        </dd>
+
+        <dt>
+            Ciudad destino
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad1.Nombre_ciudad)
+        </dd>
+
+        <dt>
+            Nombre Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre_Cliente)
+        </dd>
+
+        <dt>
+            Nombre Empresa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Nombre_Empresa)
+        </dd>
+        <dt>
+            Cantidad tiquetes
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantida_tiquetes_Reserva)
+        </dd>
+
+        <dt>
+            Total a pagar
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_pagar_Reserva)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+
+
+        <a href="@Url.Action("Index", "Reserva")" class="btn btn-primary">
+            <i class="icon-pencil icon-white"></i>
+            <span>
+                <strong>Regresar</strong>
+            </span>
+        </a>
+    </div>
+    }
+</div>

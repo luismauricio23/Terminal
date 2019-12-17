@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TerminalTransporte.Models.Bus>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<br />
+<br />
+
+
+
+
+<p>
+
+    <a href="@Url.Action("Create", "Buses")" class="btn btn-primary">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Crear Bus</strong>
+        </span>
+    </a>
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Placa
+        </th>
+        <th>
+            Tipo Bus
+        </th>
+        <th>
+            Cantidad Pasajeres
+        </th>
+        <th>
+            Nombre Conductor
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa_bus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_bus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad_pasajeros_bus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conductor.Nombre_Conductor)
+            </td>
+            <td>
+               
+
+                @Html.ActionLink(" ", "Edit", new { id = item.Placa_bus }, new { @class = "glyphicon glyphicon-pencil" })|
+                @Html.ActionLink(" ", "Details", new { id = item.Placa_bus }, new { @class = "glyphicon glyphicon-plus" }) |
+                @Html.ActionLink(" ", "Delete", new { id = item.Placa_bus }, new { @class = "glyphicon glyphicon-trash" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,106 @@
+﻿@model TerminalTransporte.Models.Tiquete
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro que quiere eliminar este Tiquete?</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_factura)
+        </dd>
+        <dt>
+            Nombre Empresa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Nombre_Empresa)
+        </dd>
+
+        <dt>
+            Nombre Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre_Cliente)
+        </dd>
+        <dt>
+            Ciudad Inicio
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.Nombre_ciudad)
+        </dd>
+
+        <dt>
+            Ciudad Fin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad1.Nombre_ciudad)
+        </dd>
+        <dt>
+            Placa Bus
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bus.Tipo_bus)
+        </dd>
+        <dt>
+            Nombre Conductor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conductor.Nombre_Conductor)
+        </dd>
+
+        <dt>
+            Nombre Empleado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.nombre_Empleado)
+        </dd>
+        <dt>
+            Cantidad tiquetes
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantida_tiquetes)
+        </dd>
+
+        <dt>
+            Total a pagar
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_pagar_Tiquete)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+
+
+            <a href="@Url.Action("Index", "Tiquete")" class="btn btn-primary">
+                <i class="icon-pencil icon-white"></i>
+                <span>
+                    <strong>Regresar</strong>
+                </span>
+            </a>
+        </div>
+    }
+</div>

@@ -1,0 +1,84 @@
+﻿@model TerminalTransporte.Models.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro que quiere eliminar este Cliente?</h3>
+<div>
+    <br/>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cedula
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula_Cliente)
+        </dd>
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Cliente)
+        </dd>
+
+        <dt>
+           Apellido
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Cliente)
+        </dd>
+
+        <dt>
+            Telefono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_Cliente)
+        </dd>
+
+        <dt>
+            Correo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Cliente)
+        </dd>
+
+        <dt>
+            Edad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad_Cliente)
+        </dd>
+
+        <dt>
+           Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+
+
+        <a href="@Url.Action("Index", "Cliente")" class="btn btn-primary">
+            <i class="icon-pencil icon-white"></i>
+            <span>
+                <strong>Regresar</strong>
+            </span>
+        </a>
+    </div>
+    
+</div>

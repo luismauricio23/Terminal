@@ -1,0 +1,105 @@
+﻿@model IEnumerable<TerminalTransporte.Models.Tiquete>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<br />
+<br />
+
+<p>
+    <a href="@Url.Action("Create", "Tiquete")" class="btn btn-primary">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Crear Tiquete</strong>
+        </span>
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Codigo
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Nombre Empresa
+        </th>
+        <th>
+            Nombre Cliente
+        </th>
+
+        <th>
+            Ciudad Inicio
+        </th>
+        <th>
+            Ciudad Final
+        </th>
+        <th>
+            Bus
+        </th>
+        <th>
+            Nombre Conductor
+        </th>
+        <th>
+            Nombre Empleado
+        </th>
+
+        <th>
+            Cantidad Tiquetes
+        </th>
+        <th>
+            Total Pagar
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_factura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_factura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empresa.Nombre_Empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nombre_Cliente)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad.Nombre_ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad1.Nombre_ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bus.Placa_bus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conductor.Nombre_Conductor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empleado.nombre_Empleado)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.cantida_tiquetes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_pagar_Tiquete)
+        </td>
+        <td>
+            @Html.ActionLink(" ", "Edit", new { id = item.Codigo_factura }, new { @class = "glyphicon glyphicon-pencil" })|
+            @Html.ActionLink(" ", "Details", new { id = item.Codigo_factura }, new { @class = "glyphicon glyphicon-plus" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.Codigo_factura }, new { @class = "glyphicon glyphicon-trash" })
+        </td>
+    </tr>
+    }
+
+</table>

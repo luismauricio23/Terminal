@@ -1,0 +1,75 @@
+﻿@model TerminalTransporte.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dl class="dl-horizontal">
+            <dt>
+                Cedula
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cedula_Cliente)
+            </dd>
+            <dt>
+                Nombre
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre_Cliente)
+            </dd>
+
+            <dt>
+                Apellido
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Apellido_Cliente)
+            </dd>
+
+            <dt>
+                Telefono
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefono_Cliente)
+            </dd>
+
+            <dt>
+                Correo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Correo_Cliente)
+            </dd>
+
+            <dt>
+                Edad
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Edad_Cliente)
+            </dd>
+
+            <dt>
+                Estado
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+
+        </dl>
+</div>
+<p>
+    @Html.ActionLink(" ", "Edit", new { id = Model.Cedula_Cliente }, new { @class = "glyphicon glyphicon-pencil" })|
+    @Html.ActionLink(" ", "Index", new { id = Model.Cedula_Cliente }, new { @class = "glyphicon glyphicon-share-alt" })
+</p>

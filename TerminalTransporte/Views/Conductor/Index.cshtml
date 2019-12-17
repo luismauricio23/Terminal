@@ -1,0 +1,78 @@
+﻿@model IEnumerable<TerminalTransporte.Models.Conductor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<br />
+<br />
+
+
+<p>
+    <a href="@Url.Action("Create", "Conductor")" class="btn btn-primary">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Crear Conductor</strong>
+        </span>
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Edad
+        </th>
+        <th>
+            Conductor
+        </th>
+        <th>
+            Nombre Empresa
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Documento_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono_Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Nombre_Empresa)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "Edit", new { id = item.Documento_Conductor }, new { @class = "glyphicon glyphicon-pencil" })|
+                @Html.ActionLink(" ", "Details", new { id = item.Documento_Conductor }, new { @class = "glyphicon glyphicon-plus" }) |
+                @Html.ActionLink(" ", "Delete", new { id = item.Documento_Conductor }, new { @class = "glyphicon glyphicon-trash" })
+            </td>
+        </tr>
+    }
+
+</table>

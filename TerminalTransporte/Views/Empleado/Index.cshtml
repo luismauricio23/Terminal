@@ -1,0 +1,92 @@
+﻿@model IEnumerable<TerminalTransporte.Models.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<br />
+<br />
+
+<p>
+    <a href="@Url.Action("Create", "Empleado")" class="btn btn-primary">
+        <i class="icon-pencil icon-white"></i>
+        <span>
+            <strong>Crear Empleado</strong>
+        </span>
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Fecha ingreso
+        </th>
+
+        <th>
+            Telefono
+        </th>
+        <th>
+            Direccion 
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Nombre Empresa
+        </th>
+        <th>
+            Cargo
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cedula_Empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_Empleado)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono_Empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion_Empleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empresa.Nombre_Empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rol.nombre)
+        </td>
+       
+        <td>
+            @Html.ActionLink(" ", "Edit", new { id = item.id_Empleado }, new { @class = "glyphicon glyphicon-pencil" })|
+            @Html.ActionLink(" ", "Details", new { id = item.id_Empleado }, new { @class = "glyphicon glyphicon-plus" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.id_Empleado }, new { @class = "glyphicon glyphicon-trash" })
+        </td>
+    </tr>
+    }
+
+</table>

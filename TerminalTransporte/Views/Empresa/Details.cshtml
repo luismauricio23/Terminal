@@ -1,0 +1,58 @@
+﻿@model TerminalTransporte.Models.Empresa
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Nit
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nit_Empresa)
+        </dd>
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Empresa)
+        </dd>
+
+        <dt>
+           Direccion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion_Empresa)
+        </dd>
+
+        <dt>
+           Correo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Empresa)
+        </dd>
+
+        <dt>
+           Telefono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_Empresa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" ", "Edit", new { id = Model.Nit_Empresa }, new { @class = "glyphicon glyphicon-pencil" })|
+    @Html.ActionLink(" ", "Index", new { id = Model.Nit_Empresa }, new { @class = "glyphicon glyphicon-share-alt" })
+</p>
