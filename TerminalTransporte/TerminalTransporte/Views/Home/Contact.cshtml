@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+<body>
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+        <div class="alert alert-success alert-dismissible" id="myAlert">
+            <button type="button" class="close">&times;</button>
+            <strong>Reserva Exitosa!</strong> Gracias por utilizar nuestros servicios.
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".close").click(function () {
+                $("#myAlert").alert("close");
+            });
+        });
+    </script>
+
+</body>

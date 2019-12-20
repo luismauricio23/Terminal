@@ -1,0 +1,77 @@
+﻿@model TerminalTransporte.Models.Reserva
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutEmpleados.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_Reserva)
+        </dd>
+        <dt>
+            Origen
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.Nombre_ciudad)
+        </dd>
+
+        <dt>
+            Destino
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad1.Nombre_ciudad)
+        </dd>
+        <dt>
+            Nombre Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre_Cliente)
+        </dd>
+        <dt>
+            Nombre Empresa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Nombre_Empresa)
+        </dd>
+        <dt>
+            Cantidad Tiquetes
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantida_tiquetes_Reserva)
+        </dd>
+
+        <dt>
+            Total a pagar
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_pagar_Reserva)
+        </dd>
+
+
+
+
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" ", "Edit", new { id = Model.Id_Reserva }, new { @class = "glyphicon glyphicon-pencil" })|
+    @Html.ActionLink(" ", "Index", new { id = Model.Id_Reserva }, new { @class = "glyphicon glyphicon-share-alt" })
+</p>

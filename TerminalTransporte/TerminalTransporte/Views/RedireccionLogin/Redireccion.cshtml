@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Redireccion";
+}
+
+
+<br />
+<br />
+
+<div class="container-fluid" >
+    <div class="row">
+
+        <div class="col-sm-6" style="background-color:white;">
+            <div  class="text-center">
+                <div>
+                    <img src="~/Content/imagenes/Clientes.jpeg" width="500" height="400">
+                    <h2 >bienvenidos Clientes</h2>
+                    <a href="@Url.Action("LoginCliente", "AccesoCliente")" class="btn btn-success btn-lg">
+                        <i class="icon-pencil icon-white"></i>
+                        <span>
+                            <strong>Clientes</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <br />
+
+        </div>
+
+        <div class="col-sm-6" style="background-color:white;">
+            <div class="text-center">
+                <div>
+                    <img src="~/Content/imagenes/Trabajadores.jpg" width="500" height="400">
+                    <h2>Bienvenidos Empleados</h2>
+                    <a href="@Url.Action("Login", "Acceso")" class="btn btn-success btn-lg">
+                        <i class="icon-pencil icon-white"></i>
+                        <span>
+                            <strong>Empleado</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+
